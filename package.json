@@ -1,0 +1,29 @@
+{
+  "name": "LoachMemory",
+  "version": "1.0.0",
+  "description": "泥鳅记忆",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/es6 -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaozg117/LoachMemory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaozg117/LoachMemory/issues"
+  },
+  "homepage": "https://github.com/zhaozg117/LoachMemory#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
