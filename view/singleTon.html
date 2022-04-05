@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div onclick="createTask()">Creeate SingleTon Task</div>
+  </body>
+
+  <script type="module">
+    import tree from "./tree.js";
+    console.log(tree);
+    /*   function Task(name) {
+      this.name = name;
+    }
+    let getSingle = function (fn) {
+      let result;
+      return function (...args) {
+        return result || (result = fn.apply(null, args));
+      };
+    };
+
+    var createTask = getSingle(function (name) {
+      return new Task(name);
+    });
+    var taskA = createTask("aaa");
+    var taskB = createTask("bbb"); */
+  </script>
+</html>

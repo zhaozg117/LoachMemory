@@ -1,3 +1,4 @@
+import tree from "../utils/tree";
 class Parent {
   constructor(name) {
     this.name = name;
@@ -12,3 +13,5 @@ class Child extends Parent {
     this.age = age;
   }
 }
+
+console.log(tree);

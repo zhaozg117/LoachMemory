@@ -8,7 +8,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src/es6 -d dist"
+    "build": "babel src/es6 -d dist",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "repository": {
     "type": "git",
@@ -26,4 +29,5 @@
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11"
   }
+
 }
