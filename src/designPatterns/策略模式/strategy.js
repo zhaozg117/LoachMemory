@@ -70,3 +70,38 @@ function creatTask(task) {
   }
   saveTask(task);
 }
+
+/******************* 策略模式 一般类 */
+
+class Context {
+  constructor(strategy) {
+    this.strategy = strategy;
+  }
+
+  execute(...args) {
+    this.strategy.do(...args);
+  }
+}
+
+class AddStrategy {
+  do(n1, n2) {
+    return n1 + n2;
+  }
+}
+class MultiplyStrategy {
+  do(n1, n2) {
+    return n1 * n2;
+  }
+}
+class SubtractStrategy {
+  do(n1, n2) {
+    return n1 - n2;
+  }
+}
+
+function test() {
+  const add = new AddStrategy();
+  const multy = new MultiplyStrategy();
+  const substract = new SubtractStrategy();
+
+}

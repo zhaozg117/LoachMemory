@@ -1,0 +1,44 @@
+<script>
+  let activeEffect;
+  class Dep {
+    constructor(value) {
+      this.subScribers = new Set();
+      this._value = value;
+    }
+
+    get value() {
+      this.depend();
+      return this._value;
+    }
+
+    set value(newValue) {
+      this._value = newValue;
+      this.notify();
+    }
+    depend() {
+      if (activeEffect) {
+        this.subScribers.add(activeEffect);
+      }
+    }
+
+    notify() {
+      this.subScribers.forEach((effect) => {
+        effect();
+      });
+    }
+  }
+
+  function watchEffect(effect) {
+    activeEffect = effect;
+    effect();
+    activeEffect = null;
+  }
+
+  const dep = new Dep("hello");
+
+  watchEffect(() => {
+    console.log("effect run:", dep.value);
+  });
+
+  dep.value = "world";
+</script>
